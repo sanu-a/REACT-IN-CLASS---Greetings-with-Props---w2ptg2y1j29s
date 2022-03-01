@@ -1,12 +1,21 @@
-import React from "react";
-import '../styles/App.css';
-import Welcome from './Welcome';
+import React, { useState } from "react";
+import "../styles/App.css";
+import Welcome from "./Welcome";
 
-const App = () => {
+function App() {
+  const [name, setName] = useState("");
   return (
-    <Welcome name="" />
-  )
+    <>
+      <input
+        placeholder="Name"
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      ></input>
+      <Welcome name={name} />
+      <h2>Welcome to Newton School.</h2>
+    </>
+  );
 }
-
 
 export default App;
