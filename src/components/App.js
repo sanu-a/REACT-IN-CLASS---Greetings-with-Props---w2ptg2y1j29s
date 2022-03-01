@@ -13,7 +13,6 @@ function App() {
         }}
       ></input>
       <Welcome name={name} />
-      <h2>Welcome to Newton School.</h2>
     </>
   );
 }
